@@ -24,8 +24,8 @@ def get_the_cheapest_big_mac_price_by_year(year):
     message_df = df.query(query)
     message = round(message_df['dollar_price'].min(),2)
     min_num = message_df['dollar_price'].idxmin()
-    min_row = message_df.loc[min_num]
-    temp_row = f"{min_row['name']}({min_row['iso_a3']}):${round(min_row['dollar_price'],2)}"
+    idx_min_row = message_df.loc[min_num]
+    temp_row = f"{idx_min_row['name']}({idx_min_row['iso_a3']}):${round(idx_min_row['dollar_price'],2)}"
     return temp_row
        
 def get_the_most_expensive_big_mac_price_by_year(year):
@@ -34,11 +34,10 @@ def get_the_most_expensive_big_mac_price_by_year(year):
   message_df = df.query(query)
   message = round(message_df['dollar_price'].max(),2)
   max_num = message_df['dollar_price'].idxmax()
-  max_row = message_df.loc[max_num]
-  temp_row = f"{max_row['name']}({max_row['iso_a3']}):${round(max_row['dollar_price'],2)}"
+  idx_max_row = message_df.loc[max_num]
+  temp_row = f"{idx_max_row['name']}({idx_max_row['iso_a3']}):${round(idx_max_row['dollar_price'],2)}"
   return temp_row
 
-# call the main function
 if __name__ == "__main__":
     print(get_big_mac_price_by_year("2015","SAU"))
     print(get_big_mac_price_by_country("SAU"))
