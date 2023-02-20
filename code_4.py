@@ -40,10 +40,10 @@ def get_the_most_expensive_big_mac_price_by_year(year):
 
 # call the main function
 if __name__ == "__main__":
-    print(get_big_mac_price_by_year("2008","MYS"))
+    print(get_big_mac_price_by_year("2015","SAU"))
     print("***")
-    print(get_big_mac_price_by_country("MYS"))
+    print(get_big_mac_price_by_country("SAU"))
     print("***")
-    print(get_the_cheapest_big_mac_price_by_year("2008"))
+    print(get_the_cheapest_big_mac_price_by_year("2015"))
     print("***")
-    print(get_the_most_expensive_big_mac_price_by_year ("2008"))
+    print(get_the_most_expensive_big_mac_price_by_year ("2015"))
